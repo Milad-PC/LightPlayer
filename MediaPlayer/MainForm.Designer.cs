@@ -29,63 +29,67 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
+            this.BtnVideo = new System.Windows.Forms.Button();
+            this.BtnImage = new System.Windows.Forms.Button();
+            this.BtnDoc = new System.Windows.Forms.Button();
+            this.BtnStart = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // BtnExit
             // 
-            this.button1.Font = new System.Drawing.Font("Yekan", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(738, 412);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(241, 71);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "خروج";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnExit.Font = new System.Drawing.Font("Yekan", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExit.Location = new System.Drawing.Point(738, 412);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(241, 71);
+            this.BtnExit.TabIndex = 0;
+            this.BtnExit.Text = "خروج";
+            this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // button2
+            // BtnVideo
             // 
-            this.button2.Location = new System.Drawing.Point(12, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(289, 94);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "ویدئو";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnVideo.Location = new System.Drawing.Point(12, 12);
+            this.BtnVideo.Name = "BtnVideo";
+            this.BtnVideo.Size = new System.Drawing.Size(289, 94);
+            this.BtnVideo.TabIndex = 0;
+            this.BtnVideo.Text = "ویدئو";
+            this.BtnVideo.UseVisualStyleBackColor = true;
+            this.BtnVideo.Click += new System.EventHandler(this.BtnVideo_Click);
             // 
-            // button3
+            // BtnImage
             // 
-            this.button3.Location = new System.Drawing.Point(12, 112);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(289, 94);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "تصاویر";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnImage.Location = new System.Drawing.Point(12, 112);
+            this.BtnImage.Name = "BtnImage";
+            this.BtnImage.Size = new System.Drawing.Size(289, 94);
+            this.BtnImage.TabIndex = 0;
+            this.BtnImage.Text = "تصاویر";
+            this.BtnImage.UseVisualStyleBackColor = true;
+            this.BtnImage.Click += new System.EventHandler(this.BtnImage_Click);
             // 
-            // button4
+            // BtnDoc
             // 
-            this.button4.Location = new System.Drawing.Point(12, 212);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(289, 94);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "مقالات";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnDoc.Location = new System.Drawing.Point(12, 212);
+            this.BtnDoc.Name = "BtnDoc";
+            this.BtnDoc.Size = new System.Drawing.Size(289, 94);
+            this.BtnDoc.TabIndex = 0;
+            this.BtnDoc.Text = "مقالات";
+            this.BtnDoc.UseVisualStyleBackColor = true;
+            this.BtnDoc.Click += new System.EventHandler(this.BtnDoc_Click);
             // 
-            // button5
+            // BtnStart
             // 
-            this.button5.Location = new System.Drawing.Point(12, 312);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(289, 94);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "اختتامیه";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnStart.Location = new System.Drawing.Point(12, 312);
+            this.BtnStart.Name = "BtnStart";
+            this.BtnStart.Size = new System.Drawing.Size(289, 94);
+            this.BtnStart.TabIndex = 0;
+            this.BtnStart.Text = "اختتامیه";
+            this.BtnStart.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -113,11 +117,11 @@
             this.ClientSize = new System.Drawing.Size(991, 491);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnStart);
+            this.Controls.Add(this.BtnDoc);
+            this.Controls.Add(this.BtnImage);
+            this.Controls.Add(this.BtnVideo);
+            this.Controls.Add(this.BtnExit);
             this.Font = new System.Drawing.Font("Yekan", 12F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -136,11 +140,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.Button BtnVideo;
+        private System.Windows.Forms.Button BtnImage;
+        private System.Windows.Forms.Button BtnDoc;
+        private System.Windows.Forms.Button BtnStart;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
     }

@@ -29,66 +29,69 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VideoForm));
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
+            this.ListBoxVideo = new System.Windows.Forms.ListBox();
+            this.MPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            this.BtnClose = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.MPlayer)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // ListBoxVideo
             // 
-            this.listBox1.Font = new System.Drawing.Font("Yekan", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 29;
-            this.listBox1.Location = new System.Drawing.Point(17, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBox1.Size = new System.Drawing.Size(191, 555);
-            this.listBox1.TabIndex = 1;
+            this.ListBoxVideo.Font = new System.Drawing.Font("Yekan", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.ListBoxVideo.FormattingEnabled = true;
+            this.ListBoxVideo.ItemHeight = 29;
+            this.ListBoxVideo.Location = new System.Drawing.Point(17, 12);
+            this.ListBoxVideo.Name = "ListBoxVideo";
+            this.ListBoxVideo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ListBoxVideo.Size = new System.Drawing.Size(191, 555);
+            this.ListBoxVideo.TabIndex = 1;
+            this.ListBoxVideo.SelectedIndexChanged += new System.EventHandler(this.ListBoxVideo_SelectedIndexChanged);
             // 
-            // axWindowsMediaPlayer2
+            // MPlayer
             // 
-            this.axWindowsMediaPlayer2.Enabled = true;
-            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(214, 12);
-            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
-            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
-            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(857, 610);
-            this.axWindowsMediaPlayer2.TabIndex = 2;
+            this.MPlayer.Enabled = true;
+            this.MPlayer.Location = new System.Drawing.Point(214, 12);
+            this.MPlayer.Name = "MPlayer";
+            this.MPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("MPlayer.OcxState")));
+            this.MPlayer.Size = new System.Drawing.Size(857, 610);
+            this.MPlayer.TabIndex = 2;
             // 
-            // button1
+            // BtnClose
             // 
-            this.button1.Font = new System.Drawing.Font("Yekan", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Location = new System.Drawing.Point(17, 573);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 49);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "بازگشت";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnClose.Font = new System.Drawing.Font("Yekan", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.BtnClose.Location = new System.Drawing.Point(17, 573);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(191, 49);
+            this.BtnClose.TabIndex = 3;
+            this.BtnClose.Text = "بازگشت";
+            this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // VideoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 634);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.axWindowsMediaPlayer2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.BtnClose);
+            this.Controls.Add(this.MPlayer);
+            this.Controls.Add(this.ListBoxVideo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VideoForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "VideoForm";
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
+            this.Text = "نمایش ویدئو";
+            this.Shown += new System.EventHandler(this.VideoForm_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.MPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox ListBoxVideo;
+        private AxWMPLib.AxWindowsMediaPlayer MPlayer;
+        private System.Windows.Forms.Button BtnClose;
     }
 }

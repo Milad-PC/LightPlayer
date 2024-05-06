@@ -16,5 +16,34 @@ namespace MediaPlayer
         {
             InitializeComponent();
         }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnVideo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            VideoForm frm = new VideoForm();
+            frm.FormClosed += (s, args) => this.Show();
+            frm.Show();
+        }
+
+        private void BtnImage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ImageForm frm = new ImageForm();
+            frm.FormClosed += (s, args) => this.Show();
+            frm.Show();
+        }
+
+        private void BtnDoc_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TextForm frm = new TextForm();
+            frm.FormClosed += (s, args) => this.Show();
+            frm.Show();
+        }
     }
 }
