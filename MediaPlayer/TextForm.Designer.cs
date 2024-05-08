@@ -28,64 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextForm));
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.ListBox = new System.Windows.Forms.ListBox();
+            this.pdfViewer = new DevExpress.XtraPdfViewer.PdfViewer();
+            this.reSize1 = new LarcomAndYoung.Windows.Forms.ReSize(this.components);
+            this.BtnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // ListBox
             // 
-            this.button1.Font = new System.Drawing.Font("Yekan", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Location = new System.Drawing.Point(14, 573);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 49);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "بازگشت";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ListBox.Font = new System.Drawing.Font("Yekan", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.ListBox.FormattingEnabled = true;
+            this.ListBox.ItemHeight = 29;
+            this.ListBox.Location = new System.Drawing.Point(14, 12);
+            this.ListBox.Name = "ListBox";
+            this.ListBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ListBox.Size = new System.Drawing.Size(191, 555);
+            this.ListBox.TabIndex = 4;
+            this.ListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox_SelectedIndexChanged);
             // 
-            // listBox1
+            // pdfViewer
             // 
-            this.listBox1.Font = new System.Drawing.Font("Yekan", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 29;
-            this.listBox1.Location = new System.Drawing.Point(14, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBox1.Size = new System.Drawing.Size(191, 555);
-            this.listBox1.TabIndex = 4;
+            this.pdfViewer.Location = new System.Drawing.Point(211, 12);
+            this.pdfViewer.Name = "pdfViewer";
+            this.pdfViewer.NavigationPanePageVisibility = DevExpress.XtraPdfViewer.PdfNavigationPanePageVisibility.None;
+            this.pdfViewer.ShowPrintStatusDialog = false;
+            this.pdfViewer.Size = new System.Drawing.Size(860, 610);
+            this.pdfViewer.TabIndex = 8;
             // 
-            // richTextBox1
+            // reSize1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(211, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(860, 610);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
+            this.reSize1.About = null;
+            this.reSize1.AutoCenterFormOnLoad = false;
+            this.reSize1.Enabled = true;
+            this.reSize1.HostContainer = this;
+            this.reSize1.InitialHostContainerHeight = 634D;
+            this.reSize1.InitialHostContainerWidth = 1083D;
+            this.reSize1.Tag = null;
+            // 
+            // BtnClose
+            // 
+            this.BtnClose.Font = new System.Drawing.Font("Yekan", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.BtnClose.Image = global::MediaPlayer.Properties.Resources.undo;
+            this.BtnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnClose.Location = new System.Drawing.Point(14, 573);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(191, 49);
+            this.BtnClose.TabIndex = 6;
+            this.BtnClose.Text = "بازگشت";
+            this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // TextForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1083, 634);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.pdfViewer);
+            this.Controls.Add(this.BtnClose);
+            this.Controls.Add(this.ListBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TextForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "1099, 673";
+            this.Text = "نمایش متن";
+            this.Shown += new System.EventHandler(this.TextForm_Shown);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button BtnClose;
+        private System.Windows.Forms.ListBox ListBox;
+        private DevExpress.XtraPdfViewer.PdfViewer pdfViewer;
+        private LarcomAndYoung.Windows.Forms.ReSize reSize1;
     }
 }

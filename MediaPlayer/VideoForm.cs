@@ -35,6 +35,7 @@ namespace MediaPlayer
             }
             foreach (string item in list)
             {
+                if (Path.GetExtension(item) != ".mp4") continue;
                 ListBoxVideo.Items.Add(Path.GetFileName(item).Replace(Path.GetExtension(item), ""));
                 src.Add(new MyVideoFiles { Name = Path.GetFileName(item).Replace(Path.GetExtension(item), ""), FilePath = item });
             }

@@ -45,5 +45,13 @@ namespace MediaPlayer
             frm.FormClosed += (s, args) => this.Show();
             frm.Show();
         }
+
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ClosingForm frm = new ClosingForm();
+            frm.FormClosed += (s, args) => this.Show();
+            frm.Show();
+        }
     }
 }

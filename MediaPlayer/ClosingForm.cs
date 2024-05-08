@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace MediaPlayer
 {
-    public partial class ImageForm : Form
+    public partial class ClosingForm : Form
     {
         private List<MyImageFiles> src = new List<MyImageFiles>();
-        public ImageForm()
+        public ClosingForm()
         {
             InitializeComponent();
         }
@@ -24,9 +24,9 @@ namespace MediaPlayer
             this.Close();
         }
 
-        private void ImageForm_Shown(object sender, EventArgs e)
+        private void ClosingForm_Shown(object sender, EventArgs e)
         {
-            string[] list = Directory.GetFiles(Directory.GetCurrentDirectory() + "/Image");
+            string[] list = Directory.GetFiles(Directory.GetCurrentDirectory() + "/Closing");
             if (list.Length == 0)
             {
                 MessageBox.Show("فایل تصویر یافت نشد");
@@ -84,10 +84,5 @@ namespace MediaPlayer
                 ListBoxPic.SelectedIndex--;
             }
         }
-    }
-    public class MyImageFiles
-    {
-        public string Name { get; set; }
-        public string FilePath { get; set; }
     }
 }
